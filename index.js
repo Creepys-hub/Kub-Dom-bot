@@ -3,12 +3,13 @@ const bot = new Discord.Client();
 const cfg = process.env.token;
 const prefix = ("? ");
 
-const ban = require('./kick et ban/ban');
+const ban = require('./kick et ban/ban.js');
 
 
 bot.on('message', function (message){
     if (ban.match(message)){
         return ban.action(message)
+    console.log("${message.author}")
     }
 });
 
