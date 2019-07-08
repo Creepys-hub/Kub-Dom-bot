@@ -7,6 +7,7 @@ bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
     bot.user.setActivity('? help').catch(console.error)
 });
+
 bot.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find(ch => ch.name === 'ⴆιҽɳʋҽɳυҽ');
@@ -15,8 +16,6 @@ bot.on('guildMemberAdd', member => {
   // Send the message, mentioning the member
   channel.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
 });
-
-const ban = require('./kick et ban/ban.js');
 
 bot.on('message', async message => {
     //discution avec le bot 	
@@ -48,17 +47,11 @@ bot.on('message', async message => {
 	channel.send(avatar)
 	console.log(`${message.author},`,avatar)
 	});
-	/*if (message.content === "test" + member.guild.channels.find('cяεερ_1 ☠')) {
-	message.author.createDM().then(channel => {
-	channel.send(":heart:")
-	console.log('message envoyé')
-		});*/
   }
 	//message pour 
 	if(message.content === prefix + "Quizz") {
 	   message.channel.send(`pas encore codé ${message.author}`);
     }
-
 	//Help de kubdom
 if(message.content === prefix + "Info") {
       var aide_embed = new Discord.RichEmbed()
@@ -88,8 +81,7 @@ if(message.content === prefix + "Info") {
 		//help du staff envers un joueur
  	if(message.content.startsWith(prefix + "helpmod")) {	
 		let myRole = message.guild.roles.find(role => role.name === "Testeur");
-		var helpm = bot.channels.find("name", "🚫šтαff🛠");
-		helpm.send(`${message.author},demande de l'aide merci de l'aider`+myRole);
+		bot.channels.find("name", "🚫šтαff🛠").send(`${message.author},demande de l'aide merci de l'aider `+myRole);
 }
 	//message pour afficher le menu discusion 
 	if(message.content === prefix + "discu") {
@@ -193,7 +185,7 @@ if(message.content.startsWith(prefix + "cat")){
 	.setFooter("Narnia Narnia Narnia Narnia")
 	message.channel.send(narnia_embed);
 	}
-		if(message.content.startsWith(prefix + "wtf")){
+	if(message.content.startsWith(prefix + "wtf")){
         var aleatoire = [
 			"https://media.giphy.com/media/l46Cuu0O6xJ42z66I/giphy.gif",
 			"https://media.giphy.com/media/13BwjdpxACoBPO/giphy.gif",
