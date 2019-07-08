@@ -7,7 +7,12 @@ bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
     bot.user.setActivity('? help').catch(console.error)
 });
-
+bot.on('guildMemberAdd', async member => {
+const channel = member.guild.channels.find('${member}', 'bvn');
+if (!channel) return;
+channel.send(`Bienvenue sur le serveur ${member}`);
+}
+);
 bot.on('message', async message => {
     //discution avec le bot 	
 	if (message.content === "Bonjour"){
