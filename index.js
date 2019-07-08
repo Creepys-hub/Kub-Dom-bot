@@ -62,7 +62,7 @@ bot.on('message', async message => {
  	if(message.content.startsWith(prefix + "up")) {	
 		console.log(`${message.author},`,"demande de l'aide");
   // Send the message to a designated channel on a server:
- const channels = member.guild.channels.find(ch => ch.name === '🚫šтαff🛠');
+ const channels = channels.find(ch => ch.name === '🚫šтαff🛠');
   // Send the message, mentioning the member
   channels.send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`);
 }
