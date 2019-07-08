@@ -5,7 +5,7 @@ const prefix = ("? ");
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
-    bot.user.setGame('? help').catch(console.error)
+    bot.user.setActivity('? help').catch(console.error)
 });
 
 bot.on('message', async message => {
