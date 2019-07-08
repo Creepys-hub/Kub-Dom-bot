@@ -10,11 +10,11 @@ const prefix = ("? ");
     
     bot.on('guildMemberAdd', member => {
       // Send the message to a designated channel on a server:
-      const msg = member.guild.channels.find(ch => ch.name === 'ⴆιҽɳʋҽɳυҽ');
+      const channel = member.guild.channels.find(ch => ch.name === 'ⴆιҽɳʋҽɳυҽ');
       // Do nothing if the channel wasn't found on this server
-      if (!msg) return;
+      if (!channel) return;
       // Send the message, mentioning the member
-      msg.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
+      channel.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
     });
         
     bot.on('message', async message => {
