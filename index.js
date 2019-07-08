@@ -9,7 +9,7 @@ const prefix = ("? ");
     });
 bot.on('guildMemberAdd', member => {
     let serverTag = member.guild.name
-    const welcomechannel = member.guild.channels.find('id', 'bvn')
+    const welcomechannel = member.guild.channels.find('name', 'bvn')
     var embed = new Discord.RichEmbed()
     .setColor('#76D880')
     .setDescription(`:inbox_tray: <@${member.user.id}> ${serverTag} Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:`)
