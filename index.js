@@ -62,7 +62,7 @@ bot.on('message', async message => {
  	if(message.content.startsWith(prefix + "up")) {	
 		let myRole = message.guild.roles.find(role => role.name === "staff");
 		var helpm = bot.channels.find("name", "🚫šтαff");
-		helpm.send(`${message.author},demande de l'aide mercide l'aider`+myRole);
+		message.helpm.send(`${message.author},demande de l'aide mercide l'aider`+myRole);
 		console.log(`${message.author},`,"demande de l'aide");
 }
 
