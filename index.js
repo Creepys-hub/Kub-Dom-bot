@@ -61,10 +61,8 @@ bot.on('message', async message => {
 	//help du staff envers un joueur
  	if(message.content.startsWith(prefix + "up")) {	
 		console.log(`${message.author},`,"demande de l'aide");
-/* const channels = bot.channels.find(ch => ch.name === '🚫šтαff🛠');
-  channels.send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`);*/
-var channelst = bot.channels.find("name", "🚫šтαff");
-channelst.send(`${message.author},demande de l'aide`);
+		var channelst = bot.channels.find("name", "🚫šтαff");
+		channelst.send(`${message.author},demande de l'aide merci @staff de l'aider`);
 }
 
 	
