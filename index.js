@@ -56,9 +56,9 @@ if(message.content === prefix + "Info") {
       .setTitle(`:robot: Informations sur le serveur Kub-Dom`)
       .setDescription(`Voici mes commandes disponible :`)
       .setThumbnail(message.author.avatarURL)
-      .addField("Cp Ip" ,"Pas encore disponible")
-      .addField("Cp Web" ,"lien du site OFFICIEL du serveur <3 ")
-      .addField("Cp Serveur" ,"Etat du serveur")
+      .addField("? Ip" ,"Pas encore disponible")
+      .addField("? Web" ,"lien du site OFFICIEL du serveur <3 ")
+      .addField("? Serveur" ,"Etat du serveur")
       .setFooter("Menu Info bot - By Creep_1")
       .setTimestamp()
       message.channel.send(aide_embed);
@@ -85,7 +85,7 @@ if(message.content === prefix + "Info") {
       .addField("Comment vas tu ?" ,"Je réponds à ça")
       .addField("Que fais tu ?" ,"Je réponds à ça")
       .addField("Génial nan ?" ,"Je réponds à ça")
-      .addField("Creepy Bot ?" ,"Je réponds à ça")//erreur corrigé
+      .addField("Kub-Dom ?" ,"Je réponds à ça")//erreur corrigé
       .addField("je t'aime" ,"Je réponds à ça")//rajouter dans le menu 07/11/2018
       .setFooter("Menu discusion bot - By Creep_1")
       .setTimestamp()
