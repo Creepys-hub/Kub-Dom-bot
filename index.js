@@ -60,9 +60,10 @@ bot.on('message', async message => {
     }
 	//help du staff envers un joueur
  	if(message.content.startsWith(prefix + "up")) {	
+		let myRole = message.guild.roles.find(role => role.name === "staff");
 		console.log(`${message.author},`,"demande de l'aide");
 		var channelst = bot.channels.find("name", "🚫šтαff");
-		channelst.send(`${message.author},demande de l'aide merci @staff de l'aider`);
+		channelst.send(`${message.author},demande de l'aide mercide l'aider`+myRole);
 }
 
 	
