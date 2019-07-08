@@ -4,6 +4,7 @@ const cfg = process.env.token;
 const prefix = ("? ");
 var playerList = [];
 var lotteryBool = false;
+const config = require("./config.json");
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
