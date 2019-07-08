@@ -3,15 +3,7 @@ const bot = new Discord.Client();
 const cfg = process.env.token;
 const prefix = ("? ");
 
-const ban = require('./kick et ban/ban.js');
 
-
-bot.on('message', function (message){
-    if (ban.match(message)){
-        return ban.action(message)
-    console.log("${message.author}")
-    }
-});
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
@@ -24,6 +16,16 @@ bot.on('guildMemberAdd', member => {
   if (!channel) return;
   // Send the message, mentioning the member
   channel.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
+});
+
+const ban = require('./kick et ban/ban.js');
+
+
+bot.on('message', function (message){
+    if (ban.match(message)){
+        return ban.action(message)
+    console.log("${message.author}")
+    }
 });
 bot.on('message', async message => {
     //discution avec le bot 	
