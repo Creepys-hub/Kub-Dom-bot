@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg = process.env.token;
 const prefix = ("? ");
-var playerList = [];
-var lotteryBool = false;
-const config = require("./config.json");
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
