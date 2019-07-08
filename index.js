@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg = process.env.token;
-const prefix = ("Cp ");
+const prefix = ("? ");
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
-    bot.user.setGame('Cp help').catch(console.error)
+    bot.user.setGame('? help').catch(console.error)
 });
 
 bot.on('message', async message => {
@@ -98,10 +98,9 @@ if(message.content === prefix + "Info") {
       .setTitle(`:robot: Voici mes catégories d'aide !`)
       .setDescription(`Voici mes commandes disponible :`)
       .setThumbnail(message.author.avatarURL)
-      .addField(":tools: Modération", "Fais `Cp mod` pour voir mes commandes de modération !")
-      .addField(":tada: Fun", "Fais `Cp fun` pour voir mes commandes d'animation !")
-      .addField(":writing_hand: Discusion bot","Fais `Cp discu` pour voir comment discuter avec moi !")
-      .addField(":writing_hand: Afficher les Informations de KUB-DOM","Fais `Cp Info` pour plus d'informations!")
+      .addField(":tada: Fun", "Fais `? fun` pour voir mes commandes d'animation !")
+      .addField(":writing_hand: Discusion bot","Fais `? discu` pour voir comment discuter avec moi !")
+      .addField(":writing_hand: Afficher les Informations de KUB-DOM","Fais `? Info` pour plus d'informations!")
       .setFooter("Menu d'aide - By Creep_1")
       .setTimestamp()
       message.channel.send(aide_embed);
@@ -112,11 +111,11 @@ if(message.content === prefix + "Info") {
       .setColor('RANDOM')
       .setTitle(`:tools: Voici mes commandes amusantes !`)
       .setThumbnail(message.author.avatarURL)
-	  .addField("Cp cat", "Affiche des gifs de chat")
-	  .addField("Cp narnia", "Affiche des gifs de narnia")
-	  .addField("Cp wtf", "Affiche des gifs wtf")
-	  .addField("Cp Yuki", "Affiche des images de (attention c'est dure) Yuki")
-      	.addField("Cp avatar", "Envoie l'image de votre avatar en mp (utilité je sais pas mais je sais que ça marche :c)")
+	  .addField("? cat", "Affiche des gifs de chat")
+	  .addField("? narnia", "Affiche des gifs de narnia")
+	  .addField("? wtf", "Affiche des gifs wtf")
+	  .addField("? Yuki", "Affiche des images de (attention c'est dure) Yuki")
+      	.addField("? avatar", "Envoie l'image de votre avatar en mp (utilité je sais pas mais je sais que ça marche :c)")
       .setFooter("Commande Fun - By Creep_1")
       .setTimestamp()
       message.channel.send(fun_embed);
@@ -204,10 +203,10 @@ if(message.content.startsWith(prefix + "cat")){
       .setColor('RANDOM')
       .setTitle(`:tools: Voici mes commandes modérations !`)
       .setThumbnail(message.author.avatarURL)
-      .addField("Cp kick <@user>", "Kick l'utilisateur !")
-      .addField("Cp ban <@user>", "Ban l'utilisateur !")
-      .addField("Cp mute <@user>", "Mute l'utilisateur mentionné")
-      .addField("Cp unmute <@user>", "Unmute l'utilisateur mentionné")
+      .addField("? kick <@user>", "Kick l'utilisateur !")
+      .addField("? ban <@user>", "Ban l'utilisateur !")
+      .addField("? mute <@user>", "Mute l'utilisateur mentionné")
+      .addField("? unmute <@user>", "Unmute l'utilisateur mentionné")
       .setFooter("Commande modération - By Creep_1")
       .setTimestamp()
       message.channel.send(mod_embed);
