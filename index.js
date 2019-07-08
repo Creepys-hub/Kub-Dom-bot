@@ -59,16 +59,12 @@ bot.on('message', async message => {
 	   message.channel.send(`pas encore codé ${message.author}`);
     }
 	//help du staff envers un joueur
- 	if(message.content === prefix + "up") {	
+ 	if(message.content.startsWith(prefix + "up")) {	
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find(ch => ch.name === '🚫šтαff🛠');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
   // Send the message, mentioning the member
   channel.send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`);
-  console.log(`${message.author},`,avatar)
-
-});
+}
 
 	
 	//Help de kubdom
