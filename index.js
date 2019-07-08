@@ -13,8 +13,8 @@ bot.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande "'''? help'''"
-et à regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
+  channel.send(`Bienvenue sur le serveur Officiel du serveur Kub-Dom je t'invite à utiliser la commande ? help pour avoir des informations
+et de regarder le réglement du serveur merci et bon jeu à toi sur le serveur :video_game:  , ${member}`);
 });
 bot.on('message', async message => {
     //discution avec le bot 	
