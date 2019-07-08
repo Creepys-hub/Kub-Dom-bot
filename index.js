@@ -63,7 +63,9 @@ bot.on('message', async message => {
 		console.log(`${message.author},`,"demande de l'aide");
 /* const channels = bot.channels.find(ch => ch.name === '🚫šтαff🛠');
   channels.send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`);*/
-bot.channels.get(`'🚫šтαff🛠`).send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`)
+var channelst = bot.channels.find("name", "🚫šтαff🛠");
+channelst.send("Le joueur ${member} demande de l'aide merci @staff de l'aider");
+bot.channels.get(`🚫šтαff🛠`).send(`Le joueur ${member} demande de l'aide merci @staff de l'aider`)
 }
 
 	
