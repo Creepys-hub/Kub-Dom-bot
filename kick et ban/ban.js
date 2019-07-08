@@ -1,3 +1,5 @@
+const prefix = ("? ");
+
 module.exports = class ban {
     static match (message) {
       return message.content.startsWith('/ban')
