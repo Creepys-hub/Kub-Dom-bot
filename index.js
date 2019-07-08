@@ -19,11 +19,11 @@ const prefix = ("? ");
         
     bot.on('message', async message => {
     	//help du staff envers un joueur
- 	if(message.content.startsWith(prefix + "helpmod")) {	
+ 	/*if(message.content.startsWith(prefix + "helpmod")) {	
 	let myRole = message.guild.roles.find(role => role.name === "staff");
 	var chm = bot.channels.find("name", "🚫šтαff🛠1");
 	chm.send(`${message.author},demande de l'aide merci de l'aider `+myRole);
-    }
+    }*/
         //Help de kubdom
     if(message.content === prefix + "Info") {
           var aide_embed = new Discord.RichEmbed()
