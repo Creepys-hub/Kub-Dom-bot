@@ -7,6 +7,7 @@ const prefix = ("? ");
         console.log("Oui jvais bossé patron xD")
         bot.user.setActivity('? help').catch(console.error)
     });
+
 bot.on('guildMemberAdd', member => {
     let serverTag = member.guild.name
     const welcomechannel = member.guild.channels.find('name', 'bvn')
@@ -18,14 +19,25 @@ bot.on('guildMemberAdd', member => {
 
         
     bot.on('message', async message => {
-    if (message.content.startsWith(prefix + "clear")) {
-            if (message.member.hasPermission("MANAGE_MESSAGES")) {
-                message.channel.fetchMessages()
-                   .then(function(list){
-                        message.channel.bulkDelete(list);
-                    }, 
-	    function(err){message.channel.send("Pas de assez de permission pour executer la commande")})                        
-            }
-        }   
+if(message.content === prefix + "help") {
+            var aide_embed = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setTitle(`:robot: Voici mes catégories d'aide !`)
+            .setDescription(`Voici mes commandes disponible :`)
+            .setThumbnail(message.author.avatarURL)
+            .addField(":writing_hand: Afficher les Informations de KUB-DOM","Fais `? Info` pour plus d'informations!")
+            .setFooter("Menu d'aide - By Creep_1")
+            .setTimestamp()
+            message.channel.send(aide_embed);
+}
+if (message.content.startsWith(prefix + "clear")) {
+   if (message.member.hasPermission("MANAGE_MESSAGES")) {
+       message.channel.fetchMessages()
+       .then(function(list){
+       message.channel.bulkDelete(list);}, 
+function(err){message.channel.send("Pas de assez de permission pour executer la commande")})                        
+}
+}   
+
 });
 bot.login(cfg);
