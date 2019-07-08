@@ -1,7 +1,7 @@
     const Discord = require('discord.js');
     const bot = new Discord.Client();
-    const cfg = require('./index.json');
-    const prefix = ("Cp ");
+    const cfg = process.env.TOKEN;
+    const prefix = ("? ");
     
     bot.on('ready', function () {
         console.log("Oui jvais bossé patron xD")
