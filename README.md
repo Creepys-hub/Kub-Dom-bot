@@ -1,3 +1,3 @@
-# The code of the video
+# Code pour le bot discord Kub-Dom 
 
-Don't share the code.
+
