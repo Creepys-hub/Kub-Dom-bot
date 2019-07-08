@@ -62,7 +62,7 @@ bot.on('message', async message => {
  	if(message.content.startsWith(prefix + "up")) {	
 		console.log(`${message.author},`,"demande de l'aide");
 		var channelst = bot.channels.find("name", "🚫šтαff");
-		channelst.send(`${message.author},demande de l'aide merci role + "staff" de l'aider`);
+		channelst.send(`${message.author},demande de l'aide merci `role + "staff" `de l'aider`);
 }
 
 	
