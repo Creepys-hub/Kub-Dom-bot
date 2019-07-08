@@ -20,8 +20,8 @@ const prefix = ("? ");
     bot.on('message', async message => {
     	//help du staff envers un joueur
  	if(message.content.startsWith(prefix + "helpmod")) {	
-	let myRole = message.guild.roles.find(role => role.name === "Testeur");
-	var chm = bot.channels.find("name", "🚫šтαff🛠");
+	let myRole = message.guild.roles.find(role => role.name === "staff");
+	var chm = bot.channels.find("name", "🚫šтαff🛠1");
 	chm.send(`${message.author},demande de l'aide merci de l'aider `+myRole);
     }
         //Help de kubdom
@@ -31,15 +31,15 @@ const prefix = ("? ");
           .setTitle(`:robot: Informations sur le serveur Kub-Dom`)
           .setDescription(`Voici mes commandes disponible :`)
           .setThumbnail(message.author.avatarURL)
-          .addField("Cp Ip" ,"Pas encore disponible")
-          .addField("Cp Web" ,"lien du site OFFICIEL du serveur <3 ")
-          .addField("Cp Serveur" ,"Etat du serveur")
+          .addField("? Ip" ,"Ip du serveur disponiblezz")
+          .addField("? Web" ,"lien du site OFFICIEL du serveur <3 ")
+          .addField("? Serveur" ,"Etat du serveur")
           .setFooter("Menu Info bot - By Creep_1")
           .setTimestamp()
           message.channel.send(aide_embed);
     }
         if(message.content.startsWith(prefix + "Ip")){
-        message.channel.send(`On a dit quoi c'est n'est pas encore disponible`);
+        message.channel.send(`kub-dom.omgcraft.fr`);
         }
         
         if(message.content.startsWith(prefix + "Web")){
