@@ -3,6 +3,14 @@ const bot = new Discord.Client();
 const cfg = process.env.token;
 const prefix = ("? ");
 
+const ban = require('./kick et ban/ban');
+
+
+bot.on('message', function (message){
+    if (ban.match(message)){
+        return ban.action(message)
+    }
+});
 
 bot.on('ready', function () {
     console.log("Oui jvais bossé patron xD")
