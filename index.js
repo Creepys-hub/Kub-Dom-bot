@@ -79,11 +79,11 @@ if(message.content === prefix + "Info") {
 	}
 	
 		//help du staff envers un joueur
- 	if(message.content.startsWith(prefix + "helpmod")) {	
-		let myRole = message.guild.roles.find(role => role.name === "Testeur");
-		var chm = bot.channels.find("name", "🚫šтαff🛠");
-		chm.send(`${message.author},demande de l'aide merci de l'aider `+myRole);
-}
+ 	//if(message.content.startsWith(prefix + "helpmod")) {	
+		//let myRole = message.guild.roles.find(role => role.name === "Testeur");
+		//var chm = bot.channels.find("name", "🚫šтαff🛠");
+		//chm.send(`${message.author},demande de l'aide merci de l'aider `+myRole);
+//}
 	//message pour afficher le menu discusion 
 	if(message.content === prefix + "discu") {
       var aide_embed = new Discord.RichEmbed()
